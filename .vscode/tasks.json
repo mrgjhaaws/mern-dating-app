@@ -1,0 +1,39 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Install all dependencies",
+      "type": "shell",
+      "command": "npm install --prefix server && npm install --prefix client",
+      "problemMatcher": []
+    },
+    {
+      "label": "Start backend (server)",
+      "type": "shell",
+      "command": "npm run dev",
+      "options": { "cwd": "${workspaceFolder}/server" },
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Start frontend (client)",
+      "type": "shell",
+      "command": "npm run dev",
+      "options": { "cwd": "${workspaceFolder}/client" },
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Seed database",
+      "type": "shell",
+      "command": "npm run seed",
+      "options": { "cwd": "${workspaceFolder}/server" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run full app (backend + frontend)",
+      "dependsOn": ["Start backend (server)", "Start frontend (client)"],
+      "problemMatcher": []
+    }
+  ]
+}

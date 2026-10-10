@@ -1,0 +1,29 @@
+### Use with the "REST Client" VS Code extension (humao.rest-client)
+@host = http://localhost:5000
+
+GET {{host}}/
+
+###
+GET {{host}}/api/profiles
+
+###
+POST {{host}}/api/profiles
+Content-Type: application/json
+
+{
+  "name": "Priya",
+  "age": 25,
+  "photo": "https://i.pravatar.cc/400x500?img=44",
+  "bio": "Love traveling and meeting new people!",
+  "interests": ["Travel", "Music", "Food"]
+}
+
+###
+# Replace <id> with an _id from the GET response
+PUT {{host}}/api/profiles/<id>
+Content-Type: application/json
+
+{ "name": "Priya Sharma", "age": 26 }
+
+###
+DELETE {{host}}/api/profiles/<id>

@@ -1,0 +1,36 @@
+.swipe-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.btn {
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active { transform: scale(0.95); }
+
+.dislike { background-color: #ff4b5c; }
+.superlike { background-color: #2f8cff; }
+.like { background-color: #28c76f; }
+
+@media (max-width: 480px) {
+  .btn { width: 52px; height: 52px; font-size: 20px; }
+}

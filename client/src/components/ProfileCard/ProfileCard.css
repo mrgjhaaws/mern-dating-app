@@ -1,0 +1,24 @@
+.profile-card {
+  background: #fff; border-radius: 16px; overflow: hidden;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12); transition: transform 0.3s, box-shadow 0.3s;
+}
+.profile-card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18); }
+.profile-card img { width: 100%; height: 220px; object-fit: cover; display: block; }
+.profile-body, .profile-edit { padding: 14px; }
+.profile-body h3 { margin: 0 0 4px; font-size: 18px; }
+.bio { margin: 0 0 8px; font-size: 14px; color: #666; min-height: 20px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+.tag { background: #f1f3f5; color: #495057; font-size: 12px; padding: 3px 10px; border-radius: 999px; }
+.actions { display: flex; gap: 8px; }
+.actions button {
+  flex: 1; padding: 8px; border: 1px solid #ddd; border-radius: 8px;
+  background: #fff; cursor: pointer; font-weight: 600; transition: background 0.2s;
+}
+.actions button:hover { background: #f8f9fa; }
+.actions .delete { background: #ff4b5c; border-color: #ff4b5c; color: #fff; }
+.actions .delete:hover { background: #e63946; }
+.actions .save { background: #28c76f; border-color: #28c76f; color: #fff; }
+.profile-edit { display: flex; flex-direction: column; gap: 8px; }
+.profile-edit input, .profile-edit textarea {
+  padding: 8px; border: 1px solid #ddd; border-radius: 8px; font: inherit;
+}
